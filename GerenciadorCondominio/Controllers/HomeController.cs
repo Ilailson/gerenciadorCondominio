@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using GerenciadorCondominios.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using GerenciadorCondominio.Models;
+using System.Diagnostics;
 
-namespace GerenciadorCondominio.Controllers
+namespace GerenciadorCondominios.Controllers
 {
     public class HomeController : Controller
     {

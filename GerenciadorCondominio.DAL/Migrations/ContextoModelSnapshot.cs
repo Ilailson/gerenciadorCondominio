@@ -3,10 +3,11 @@ using System;
 using GerenciadorCondominios.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace GerenciadorCondominio.DAL.Migrations
+#nullable disable
+
+namespace GerenciadorCondominios.DAL.Migrations
 {
     [DbContext(typeof(Contexto))]
     partial class ContextoModelSnapshot : ModelSnapshot
@@ -15,16 +16,14 @@ namespace GerenciadorCondominio.DAL.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.2")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "6.0.1")
+                .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("GerenciadorCondominios.BLL.Models.Aluguel", b =>
                 {
                     b.Property<int>("AluguelId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<int>("Ano")
                         .HasColumnType("int");
@@ -33,38 +32,37 @@ namespace GerenciadorCondominio.DAL.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("Valor")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(65,30)");
 
                     b.HasKey("AluguelId");
 
                     b.HasIndex("MesId");
 
-                    b.ToTable("Alugueis");
+                    b.ToTable("Alugueis", (string)null);
                 });
 
             modelBuilder.Entity("GerenciadorCondominios.BLL.Models.Apartamento", b =>
                 {
                     b.Property<int>("ApartamentoId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<int>("Andar")
                         .HasColumnType("int");
 
                     b.Property<string>("Foto")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("MoradorId")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<int>("Numero")
                         .HasColumnType("int");
 
                     b.Property<string>("ProprietarioId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("varchar(255)");
 
                     b.HasKey("ApartamentoId");
 
@@ -72,88 +70,86 @@ namespace GerenciadorCondominio.DAL.Migrations
 
                     b.HasIndex("ProprietarioId");
 
-                    b.ToTable("Apartamentos");
+                    b.ToTable("Apartamentos", (string)null);
                 });
 
             modelBuilder.Entity("GerenciadorCondominios.BLL.Models.Evento", b =>
                 {
                     b.Property<int>("EventoId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("Data")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("UsuarioId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("varchar(255)");
 
                     b.HasKey("EventoId");
 
                     b.HasIndex("UsuarioId");
 
-                    b.ToTable("Eventos");
+                    b.ToTable("Eventos", (string)null);
                 });
 
             modelBuilder.Entity("GerenciadorCondominios.BLL.Models.Funcao", b =>
                 {
                     b.Property<string>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Descricao")
                         .IsRequired()
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasMaxLength(30)
+                        .HasColumnType("varchar(30)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(256)")
-                        .HasMaxLength(256);
+                        .HasMaxLength(256)
+                        .HasColumnType("varchar(256)");
 
                     b.Property<string>("NormalizedName")
-                        .HasColumnType("nvarchar(256)")
-                        .HasMaxLength(256);
+                        .HasMaxLength(256)
+                        .HasColumnType("varchar(256)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedName")
                         .IsUnique()
-                        .HasName("RoleNameIndex")
-                        .HasFilter("[NormalizedName] IS NOT NULL");
+                        .HasDatabaseName("RoleNameIndex");
 
-                    b.ToTable("Funcoes");
+                    b.ToTable("Funcoes", (string)null);
 
                     b.HasData(
                         new
                         {
-                            Id = "bea86d30-5c81-46b4-a8ce-8364d2b500a8",
-                            ConcurrencyStamp = "ea965faf-c7ac-44aa-bb58-d4d688b41f2a",
+                            Id = "7b6b6432-b29e-4138-8cbc-6f749f6ee610",
+                            ConcurrencyStamp = "563574b9-b212-4385-be52-b9fb779fac2e",
                             Descricao = "Morador do Prédio",
                             Name = "Morador",
                             NormalizedName = "MORADOR"
                         },
                         new
                         {
-                            Id = "79fd61bb-8981-4209-bab4-1bfd6e334cb0",
-                            ConcurrencyStamp = "fd893416-0457-4dee-92ad-affed1b9c18d",
+                            Id = "e6490810-50c9-49f9-9b91-5111f1ec0095",
+                            ConcurrencyStamp = "be512cbb-aec1-4fae-8211-aed263b25db8",
                             Descricao = "Síndico do Prédio",
                             Name = "Sindico",
                             NormalizedName = "SINDICO"
                         },
                         new
                         {
-                            Id = "0524fe32-0839-4798-8f3b-4897e6fd02c5",
-                            ConcurrencyStamp = "def70744-e138-4493-a31e-fbbadcf0ba93",
+                            Id = "8fb1acb3-4d3a-4b53-a926-fc7cedcef2c1",
+                            ConcurrencyStamp = "9eb8ddca-9015-4d82-a1e0-dfac279fb46b",
                             Descricao = "Administrador do Prédio",
                             Name = "Administrador",
                             NormalizedName = "ADMINISTRADOR"
@@ -164,8 +160,7 @@ namespace GerenciadorCondominio.DAL.Migrations
                 {
                     b.Property<int>("HistoricoRecursosId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<int>("Ano")
                         .HasColumnType("int");
@@ -180,13 +175,13 @@ namespace GerenciadorCondominio.DAL.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("Valor")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(65,30)");
 
                     b.HasKey("HistoricoRecursosId");
 
                     b.HasIndex("MesId");
 
-                    b.ToTable("HistoricoRecursos");
+                    b.ToTable("HistoricoRecursos", (string)null);
                 });
 
             modelBuilder.Entity("GerenciadorCondominios.BLL.Models.Mes", b =>
@@ -196,15 +191,15 @@ namespace GerenciadorCondominio.DAL.Migrations
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasMaxLength(30)
+                        .HasColumnType("varchar(30)");
 
                     b.HasKey("MesId");
 
                     b.HasIndex("Nome")
                         .IsUnique();
 
-                    b.ToTable("Meses");
+                    b.ToTable("Meses", (string)null);
 
                     b.HasData(
                         new
@@ -273,20 +268,20 @@ namespace GerenciadorCondominio.DAL.Migrations
                 {
                     b.Property<int>("PagamentoId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<int>("AluguelId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("DataPagamento")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
                     b.Property<string>("UsuarioId")
-                        .HasColumnType("nvarchar(450)");
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
 
                     b.HasKey("PagamentoId");
 
@@ -301,40 +296,38 @@ namespace GerenciadorCondominio.DAL.Migrations
                 {
                     b.Property<int>("ServicoId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasMaxLength(30)
+                        .HasColumnType("varchar(30)");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
                     b.Property<string>("UsuarioId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<decimal>("Valor")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(65,30)");
 
                     b.HasKey("ServicoId");
 
                     b.HasIndex("UsuarioId");
 
-                    b.ToTable("Servicos");
+                    b.ToTable("Servicos", (string)null);
                 });
 
             modelBuilder.Entity("GerenciadorCondominios.BLL.Models.ServicoPredio", b =>
                 {
                     b.Property<int>("ServicoPredioId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("DataExecucao")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<int>("ServicoId")
                         .HasColumnType("int");
@@ -343,76 +336,76 @@ namespace GerenciadorCondominio.DAL.Migrations
 
                     b.HasIndex("ServicoId");
 
-                    b.ToTable("ServicoPredios");
+                    b.ToTable("ServicoPredios", (string)null);
                 });
 
             modelBuilder.Entity("GerenciadorCondominios.BLL.Models.Usuario", b =>
                 {
                     b.Property<string>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
                     b.Property<string>("CPF")
                         .IsRequired()
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasMaxLength(30)
+                        .HasColumnType("varchar(30)");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(256)")
-                        .HasMaxLength(256);
+                        .HasMaxLength(256)
+                        .HasColumnType("varchar(256)");
 
                     b.Property<bool>("EmailConfirmed")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<string>("Foto")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<bool>("LockoutEnabled")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<DateTimeOffset?>("LockoutEnd")
-                        .HasColumnType("datetimeoffset");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("NormalizedEmail")
-                        .HasColumnType("nvarchar(256)")
-                        .HasMaxLength(256);
+                        .HasMaxLength(256)
+                        .HasColumnType("varchar(256)");
 
                     b.Property<string>("NormalizedUserName")
-                        .HasColumnType("nvarchar(256)")
-                        .HasMaxLength(256);
+                        .HasMaxLength(256)
+                        .HasColumnType("varchar(256)");
 
                     b.Property<string>("PasswordHash")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<bool>("PhoneNumberConfirmed")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<bool>("PrimeiroAcesso")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<string>("SecurityStamp")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
                     b.Property<bool>("TwoFactorEnabled")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(256)")
-                        .HasMaxLength(256);
+                        .HasMaxLength(256)
+                        .HasColumnType("varchar(256)");
 
                     b.HasKey("Id");
 
@@ -420,46 +413,44 @@ namespace GerenciadorCondominio.DAL.Migrations
                         .IsUnique();
 
                     b.HasIndex("NormalizedEmail")
-                        .HasName("EmailIndex");
+                        .HasDatabaseName("EmailIndex");
 
                     b.HasIndex("NormalizedUserName")
                         .IsUnique()
-                        .HasName("UserNameIndex")
-                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+                        .HasDatabaseName("UserNameIndex");
 
-                    b.ToTable("Usuarios");
+                    b.ToTable("Usuarios", (string)null);
                 });
 
             modelBuilder.Entity("GerenciadorCondominios.BLL.Models.Veiculo", b =>
                 {
                     b.Property<int>("VeiculoId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<string>("Cor")
                         .IsRequired()
-                        .HasColumnType("nvarchar(20)")
-                        .HasMaxLength(20);
+                        .HasMaxLength(20)
+                        .HasColumnType("varchar(20)");
 
                     b.Property<string>("Marca")
                         .IsRequired()
-                        .HasColumnType("nvarchar(20)")
-                        .HasMaxLength(20);
+                        .HasMaxLength(20)
+                        .HasColumnType("varchar(20)");
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("nvarchar(40)")
-                        .HasMaxLength(40);
+                        .HasMaxLength(40)
+                        .HasColumnType("varchar(40)");
 
                     b.Property<string>("Placa")
                         .IsRequired()
-                        .HasColumnType("nvarchar(20)")
-                        .HasMaxLength(20);
+                        .HasMaxLength(20)
+                        .HasColumnType("varchar(20)");
 
                     b.Property<string>("UsuarioId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("varchar(255)");
 
                     b.HasKey("VeiculoId");
 
@@ -468,111 +459,109 @@ namespace GerenciadorCondominio.DAL.Migrations
 
                     b.HasIndex("UsuarioId");
 
-                    b.ToTable("Veiculos");
+                    b.ToTable("Veiculos", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<string>("ClaimType")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("ClaimValue")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("RoleId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("varchar(255)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("AspNetRoleClaims");
+                    b.ToTable("AspNetRoleClaims", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<string>("ClaimType")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("ClaimValue")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("varchar(255)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("AspNetUserClaims");
+                    b.ToTable("AspNetUserClaims", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ProviderKey")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ProviderDisplayName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("varchar(255)");
 
                     b.HasKey("LoginProvider", "ProviderKey");
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("AspNetUserLogins");
+                    b.ToTable("AspNetUserLogins", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
                 {
                     b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("RoleId")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("varchar(255)");
 
                     b.HasKey("UserId", "RoleId");
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("AspNetUserRoles");
+                    b.ToTable("AspNetUserRoles", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
                     b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("Value")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("UserId", "LoginProvider", "Name");
 
-                    b.ToTable("AspNetUserTokens");
+                    b.ToTable("AspNetUserTokens", (string)null);
                 });
 
             modelBuilder.Entity("GerenciadorCondominios.BLL.Models.Aluguel", b =>
@@ -582,6 +571,8 @@ namespace GerenciadorCondominio.DAL.Migrations
                         .HasForeignKey("MesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Mes");
                 });
 
             modelBuilder.Entity("GerenciadorCondominios.BLL.Models.Apartamento", b =>
@@ -589,13 +580,18 @@ namespace GerenciadorCondominio.DAL.Migrations
                     b.HasOne("GerenciadorCondominios.BLL.Models.Usuario", "Morador")
                         .WithMany("MoradoresApartamentos")
                         .HasForeignKey("MoradorId")
-                        .OnDelete(DeleteBehavior.NoAction);
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
 
                     b.HasOne("GerenciadorCondominios.BLL.Models.Usuario", "Proprietario")
                         .WithMany("ProprietariosApartamentos")
                         .HasForeignKey("ProprietarioId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
+
+                    b.Navigation("Morador");
+
+                    b.Navigation("Proprietario");
                 });
 
             modelBuilder.Entity("GerenciadorCondominios.BLL.Models.Evento", b =>
@@ -605,6 +601,8 @@ namespace GerenciadorCondominio.DAL.Migrations
                         .HasForeignKey("UsuarioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("GerenciadorCondominios.BLL.Models.HistoricoRecursos", b =>
@@ -614,6 +612,8 @@ namespace GerenciadorCondominio.DAL.Migrations
                         .HasForeignKey("MesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Mes");
                 });
 
             modelBuilder.Entity("GerenciadorCondominios.BLL.Models.Pagamento", b =>
@@ -626,7 +626,13 @@ namespace GerenciadorCondominio.DAL.Migrations
 
                     b.HasOne("GerenciadorCondominios.BLL.Models.Usuario", "Usuario")
                         .WithMany("Pagamentos")
-                        .HasForeignKey("UsuarioId");
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Aluguel");
+
+                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("GerenciadorCondominios.BLL.Models.Servico", b =>
@@ -636,6 +642,8 @@ namespace GerenciadorCondominio.DAL.Migrations
                         .HasForeignKey("UsuarioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("GerenciadorCondominios.BLL.Models.ServicoPredio", b =>
@@ -645,6 +653,8 @@ namespace GerenciadorCondominio.DAL.Migrations
                         .HasForeignKey("ServicoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Servico");
                 });
 
             modelBuilder.Entity("GerenciadorCondominios.BLL.Models.Veiculo", b =>
@@ -654,6 +664,8 @@ namespace GerenciadorCondominio.DAL.Migrations
                         .HasForeignKey("UsuarioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -705,6 +717,38 @@ namespace GerenciadorCondominio.DAL.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("GerenciadorCondominios.BLL.Models.Aluguel", b =>
+                {
+                    b.Navigation("Pagamentos");
+                });
+
+            modelBuilder.Entity("GerenciadorCondominios.BLL.Models.Mes", b =>
+                {
+                    b.Navigation("Alugueis");
+
+                    b.Navigation("HistoricoRecursos");
+                });
+
+            modelBuilder.Entity("GerenciadorCondominios.BLL.Models.Servico", b =>
+                {
+                    b.Navigation("ServicoPredios");
+                });
+
+            modelBuilder.Entity("GerenciadorCondominios.BLL.Models.Usuario", b =>
+                {
+                    b.Navigation("Eventos");
+
+                    b.Navigation("MoradoresApartamentos");
+
+                    b.Navigation("Pagamentos");
+
+                    b.Navigation("ProprietariosApartamentos");
+
+                    b.Navigation("Servicos");
+
+                    b.Navigation("Veiculos");
                 });
 #pragma warning restore 612, 618
         }

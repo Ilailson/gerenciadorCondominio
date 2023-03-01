@@ -9,8 +9,10 @@ namespace GerenciadorCondominios.DAL.Mapeamentos
     {
         public void Configure(EntityTypeBuilder<Funcao> builder)
         {
-            builder.Property(f => f.Id).ValueGeneratedOnAdd();
-            builder.Property(f => f.Descricao).IsRequired().HasMaxLength(30);
+            builder.Property(f => f.Id).ValueGeneratedOnAdd(); //gerar id automatico
+            builder.Property(f => f.Descricao).IsRequired().HasMaxLength(30);//obrigatório. Maximo 30
+
+            //criando as funções
 
             builder.HasData(
                 new Funcao

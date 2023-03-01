@@ -6,7 +6,7 @@ namespace GerenciadorCondominios.DAL.Mapeamentos
 {
     public class VeiculoMap : IEntityTypeConfiguration<Veiculo>
     {
-        public void Configure(EntityTypeBuilder<Veiculo> builder)
+        public void Configure(EntityTypeBuilder<Veiculo> builder) 
         {
             builder.HasKey(v => v.VeiculoId);
             builder.Property(v => v.Nome).IsRequired().HasMaxLength(40);

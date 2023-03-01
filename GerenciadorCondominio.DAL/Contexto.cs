@@ -7,6 +7,13 @@ namespace GerenciadorCondominios.DAL
 {
     public class Contexto : IdentityDbContext<Usuario, Funcao, string>
     {
+       
+
+        public Contexto(DbContextOptions<Contexto> opcoes) : base(opcoes)
+        {
+
+        }
+
         public DbSet<Aluguel> Alugueis { get; set; }
         public DbSet<Apartamento> Apartamentos { get; set; }
         public DbSet<Evento> Eventos { get; set; }
@@ -18,12 +25,6 @@ namespace GerenciadorCondominios.DAL
         public DbSet<ServicoPredio> ServicoPredios { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Veiculo> Veiculos { get; set; }
-
-        public Contexto(DbContextOptions<Contexto> opcoes) : base(opcoes)
-        {
-
-        }
-
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

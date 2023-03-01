@@ -7,7 +7,7 @@ namespace GerenciadorCondominios.DAL.Mapeamentos
     public class MesMap : IEntityTypeConfiguration<Mes>
     {
         public void Configure(EntityTypeBuilder<Mes> builder)
-        {
+        { 
             builder.HasKey(m => m.MesId);
             builder.Property(m => m.MesId).ValueGeneratedNever();
 
