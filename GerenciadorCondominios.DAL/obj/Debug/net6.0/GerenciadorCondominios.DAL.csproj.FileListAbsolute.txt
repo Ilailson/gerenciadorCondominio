@@ -1,0 +1,17 @@
+C:\Users\ilail\Desktop\gerenciadorCondominio\GerenciadorCondominios\GerenciadorCondominios.DAL\bin\Debug\net6.0\GerenciadorCondominios.DAL.deps.json
+C:\Users\ilail\Desktop\gerenciadorCondominio\GerenciadorCondominios\GerenciadorCondominios.DAL\bin\Debug\net6.0\GerenciadorCondominios.DAL.runtimeconfig.json
+C:\Users\ilail\Desktop\gerenciadorCondominio\GerenciadorCondominios\GerenciadorCondominios.DAL\bin\Debug\net6.0\GerenciadorCondominios.DAL.dll
+C:\Users\ilail\Desktop\gerenciadorCondominio\GerenciadorCondominios\GerenciadorCondominios.DAL\bin\Debug\net6.0\GerenciadorCondominios.DAL.pdb
+C:\Users\ilail\Desktop\gerenciadorCondominio\GerenciadorCondominios\GerenciadorCondominios.DAL\bin\Debug\net6.0\GerenciadorCondominios.BLL.dll
+C:\Users\ilail\Desktop\gerenciadorCondominio\GerenciadorCondominios\GerenciadorCondominios.DAL\bin\Debug\net6.0\GerenciadorCondominios.BLL.pdb
+C:\Users\ilail\Desktop\gerenciadorCondominio\GerenciadorCondominios\GerenciadorCondominios.DAL\obj\Debug\net6.0\GerenciadorCondominios.DAL.csproj.AssemblyReference.cache
+C:\Users\ilail\Desktop\gerenciadorCondominio\GerenciadorCondominios\GerenciadorCondominios.DAL\obj\Debug\net6.0\GerenciadorCondominios.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ilail\Desktop\gerenciadorCondominio\GerenciadorCondominios\GerenciadorCondominios.DAL\obj\Debug\net6.0\GerenciadorCondominios.DAL.AssemblyInfoInputs.cache
+C:\Users\ilail\Desktop\gerenciadorCondominio\GerenciadorCondominios\GerenciadorCondominios.DAL\obj\Debug\net6.0\GerenciadorCondominios.DAL.AssemblyInfo.cs
+C:\Users\ilail\Desktop\gerenciadorCondominio\GerenciadorCondominios\GerenciadorCondominios.DAL\obj\Debug\net6.0\GerenciadorCondominios.DAL.csproj.CoreCompileInputs.cache
+C:\Users\ilail\Desktop\gerenciadorCondominio\GerenciadorCondominios\GerenciadorCondominios.DAL\obj\Debug\net6.0\GerenciadorCondominios.DAL.csproj.CopyComplete
+C:\Users\ilail\Desktop\gerenciadorCondominio\GerenciadorCondominios\GerenciadorCondominios.DAL\obj\Debug\net6.0\GerenciadorCondominios.DAL.dll
+C:\Users\ilail\Desktop\gerenciadorCondominio\GerenciadorCondominios\GerenciadorCondominios.DAL\obj\Debug\net6.0\refint\GerenciadorCondominios.DAL.dll
+C:\Users\ilail\Desktop\gerenciadorCondominio\GerenciadorCondominios\GerenciadorCondominios.DAL\obj\Debug\net6.0\GerenciadorCondominios.DAL.pdb
+C:\Users\ilail\Desktop\gerenciadorCondominio\GerenciadorCondominios\GerenciadorCondominios.DAL\obj\Debug\net6.0\GerenciadorCondominios.DAL.genruntimeconfig.cache
+C:\Users\ilail\Desktop\gerenciadorCondominio\GerenciadorCondominios\GerenciadorCondominios.DAL\obj\Debug\net6.0\ref\GerenciadorCondominios.DAL.dll
