@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "b1St97i/mKMZBdGwI0YG7VmvLVBssY2+mvgyYIcfEahnllgRc9+9TFF+YnCWhb2MgCmTSJ//fmUG/MI9Y0d78g==",
+  "dgSpecHash": "HfMtCHPRsVE+0RhPSu45MnpSfW1oYmkh7ZTqdWPJOeQSbxG29JHLgcm9RxN6cLVNClt7kq3RoB0gkKq3URbZ3A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ilail\\Desktop\\gerenciadorCondominio\\GerenciadorCondominios\\GerenciadorCondominios.DAL\\GerenciadorCondominios.DAL.csproj",
+  "projectFilePath": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios.DAL\\GerenciadorCondominios.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ilail\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ilail\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

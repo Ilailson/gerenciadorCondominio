@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ilail\\Desktop\\gerenciadorCondominio\\GerenciadorCondominios\\GerenciadorCondominios.DAL\\GerenciadorCondominios.DAL.csproj": {}
+    "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios.DAL\\GerenciadorCondominios.DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ilail\\Desktop\\gerenciadorCondominio\\GerenciadorCondominios\\GerenciadorCondominios.BLL\\GerenciadorCondominios.BLL.csproj": {
+    "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios.BLL\\GerenciadorCondominios.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ilail\\Desktop\\gerenciadorCondominio\\GerenciadorCondominios\\GerenciadorCondominios.BLL\\GerenciadorCondominios.BLL.csproj",
+        "projectUniqueName": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios.BLL\\GerenciadorCondominios.BLL.csproj",
         "projectName": "GerenciadorCondominios.BLL",
-        "projectPath": "C:\\Users\\ilail\\Desktop\\gerenciadorCondominio\\GerenciadorCondominios\\GerenciadorCondominios.BLL\\GerenciadorCondominios.BLL.csproj",
+        "projectPath": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios.BLL\\GerenciadorCondominios.BLL.csproj",
         "packagesPath": "C:\\Users\\ilail\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ilail\\Desktop\\gerenciadorCondominio\\GerenciadorCondominios\\GerenciadorCondominios.BLL\\obj\\",
+        "outputPath": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios.BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ilail\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -85,14 +85,14 @@
         }
       }
     },
-    "C:\\Users\\ilail\\Desktop\\gerenciadorCondominio\\GerenciadorCondominios\\GerenciadorCondominios.DAL\\GerenciadorCondominios.DAL.csproj": {
+    "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios.DAL\\GerenciadorCondominios.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ilail\\Desktop\\gerenciadorCondominio\\GerenciadorCondominios\\GerenciadorCondominios.DAL\\GerenciadorCondominios.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios.DAL\\GerenciadorCondominios.DAL.csproj",
         "projectName": "GerenciadorCondominios.DAL",
-        "projectPath": "C:\\Users\\ilail\\Desktop\\gerenciadorCondominio\\GerenciadorCondominios\\GerenciadorCondominios.DAL\\GerenciadorCondominios.DAL.csproj",
+        "projectPath": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios.DAL\\GerenciadorCondominios.DAL.csproj",
         "packagesPath": "C:\\Users\\ilail\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ilail\\Desktop\\gerenciadorCondominio\\GerenciadorCondominios\\GerenciadorCondominios.DAL\\obj\\",
+        "outputPath": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ilail\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -109,8 +109,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ilail\\Desktop\\gerenciadorCondominio\\GerenciadorCondominios\\GerenciadorCondominios.BLL\\GerenciadorCondominios.BLL.csproj": {
-                "projectPath": "C:\\Users\\ilail\\Desktop\\gerenciadorCondominio\\GerenciadorCondominios\\GerenciadorCondominios.BLL\\GerenciadorCondominios.BLL.csproj"
+              "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios.BLL\\GerenciadorCondominios.BLL.csproj": {
+                "projectPath": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios.BLL\\GerenciadorCondominios.BLL.csproj"
               }
             }
           }

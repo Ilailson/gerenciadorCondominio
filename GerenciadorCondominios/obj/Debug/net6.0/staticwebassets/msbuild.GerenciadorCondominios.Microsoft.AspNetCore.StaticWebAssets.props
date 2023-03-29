@@ -48,6 +48,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\GerenciadorCondominios.bundle.scp.css))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Imagens\57e5e4a3-10c2-4523-aafd-540ae2c68ea3coluna grafana.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>GerenciadorCondominios</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GerenciadorCondominios</BasePath>
+      <RelativePath>Imagens/57e5e4a3-10c2-4523-aafd-540ae2c68ea3coluna grafana.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Imagens\57e5e4a3-10c2-4523-aafd-540ae2c68ea3coluna grafana.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Imagens\5ce64ed6-9f71-4229-871c-c720780c27ffcpf Laurinho.jpeg))">
       <SourceType>Package</SourceType>
       <SourceId>GerenciadorCondominios</SourceId>
@@ -80,6 +96,54 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Imagens\6d888ece-0c1c-4287-9ebd-0c32d872bbe7coluna grafana.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Imagens\70367cc3-1d7d-4a2e-9ef2-cf8426ed013dDiagrma Sequencia Registrar pedido.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>GerenciadorCondominios</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GerenciadorCondominios</BasePath>
+      <RelativePath>Imagens/70367cc3-1d7d-4a2e-9ef2-cf8426ed013dDiagrma Sequencia Registrar pedido.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Imagens\70367cc3-1d7d-4a2e-9ef2-cf8426ed013dDiagrma Sequencia Registrar pedido.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Imagens\71c827a1-b3ac-4d9e-b1df-794f039d6629coluna grafana.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>GerenciadorCondominios</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GerenciadorCondominios</BasePath>
+      <RelativePath>Imagens/71c827a1-b3ac-4d9e-b1df-794f039d6629coluna grafana.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Imagens\71c827a1-b3ac-4d9e-b1df-794f039d6629coluna grafana.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Imagens\b226df86-0763-4fc8-855b-93a7de94f2f4coluna grafana.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>GerenciadorCondominios</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GerenciadorCondominios</BasePath>
+      <RelativePath>Imagens/b226df86-0763-4fc8-855b-93a7de94f2f4coluna grafana.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Imagens\b226df86-0763-4fc8-855b-93a7de94f2f4coluna grafana.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Imagens\dbe0cb98-740f-4680-b8f4-52b1c293bdabcpf Laurinho.jpeg))">
       <SourceType>Package</SourceType>
       <SourceId>GerenciadorCondominios</SourceId>
@@ -95,6 +159,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Imagens\dbe0cb98-740f-4680-b8f4-52b1c293bdabcpf Laurinho.jpeg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Imagens\e97c89da-1e90-4137-bae5-73d551074299cpf Laurinho.jpeg))">
+      <SourceType>Package</SourceType>
+      <SourceId>GerenciadorCondominios</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GerenciadorCondominios</BasePath>
+      <RelativePath>Imagens/e97c89da-1e90-4137-bae5-73d551074299cpf Laurinho.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Imagens\e97c89da-1e90-4137-bae5-73d551074299cpf Laurinho.jpeg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Imagens\f75767cb-08cc-4089-80f5-4d42c5b26daccoluna grafana.jpg))">
       <SourceType>Package</SourceType>

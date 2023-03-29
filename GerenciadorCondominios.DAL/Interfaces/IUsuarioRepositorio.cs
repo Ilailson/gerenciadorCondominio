@@ -7,7 +7,10 @@ namespace GerenciadorCondominios.DAL.Interfaces
     {
         int VerificarSeExisteRegistro();
         Task LogarUsuario(Usuario usuario, bool lembrar);
+        Task Deslogar();
         Task<IdentityResult> CriarUsuario(Usuario usuario, string senha);
         Task IncluirUsuarioEmFuncao(Usuario usuario, string funcao);
+        Task<Usuario> PegarUsuarioPeloEmail(string email);//pegar e-mail - formulario - consultar banco. string email
+
     }
 }

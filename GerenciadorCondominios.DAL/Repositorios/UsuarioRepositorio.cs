@@ -3,7 +3,7 @@ using GerenciadorCondominios.DAL.Interfaces;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
-
+using Microsoft.Extensions.Primitives;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -63,6 +63,18 @@ namespace GerenciadorCondominios.DAL.Repositorios
             }
         }
 
+        public async Task DeslogarUsuario()
+        {
+            try
+            {
+                await _gerenciadorLogin.SignOutAsync();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public int VerificarSeExisteRegistro()
         {
             try
@@ -71,6 +83,17 @@ namespace GerenciadorCondominios.DAL.Repositorios
 
             }
             catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public async Task<Usuario> PegarUsuarioPeloEmail(string email)
+        {
+            try
+            {
+                return await _gerenciadorUsuarios.FindByEmailAsync(email);
+            }catch(Exception ex)
             {
                 throw ex;
             }

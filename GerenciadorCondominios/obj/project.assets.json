@@ -10544,11 +10544,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ilail\\Desktop\\gerenciadorCondominio\\GerenciadorCondominios\\GerenciadorCondominios\\GerenciadorCondominios.csproj",
+      "projectUniqueName": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\GerenciadorCondominios.csproj",
       "projectName": "GerenciadorCondominios",
-      "projectPath": "C:\\Users\\ilail\\Desktop\\gerenciadorCondominio\\GerenciadorCondominios\\GerenciadorCondominios\\GerenciadorCondominios.csproj",
+      "projectPath": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\GerenciadorCondominios.csproj",
       "packagesPath": "C:\\Users\\ilail\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ilail\\Desktop\\gerenciadorCondominio\\GerenciadorCondominios\\GerenciadorCondominios\\obj\\",
+      "outputPath": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ilail\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -10565,11 +10565,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\ilail\\Desktop\\gerenciadorCondominio\\GerenciadorCondominios\\GerenciadorCondominios.BLL\\GerenciadorCondominios.BLL.csproj": {
-              "projectPath": "C:\\Users\\ilail\\Desktop\\gerenciadorCondominio\\GerenciadorCondominios\\GerenciadorCondominios.BLL\\GerenciadorCondominios.BLL.csproj"
+            "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios.BLL\\GerenciadorCondominios.BLL.csproj": {
+              "projectPath": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios.BLL\\GerenciadorCondominios.BLL.csproj"
             },
-            "C:\\Users\\ilail\\Desktop\\gerenciadorCondominio\\GerenciadorCondominios\\GerenciadorCondominios.DAL\\GerenciadorCondominios.DAL.csproj": {
-              "projectPath": "C:\\Users\\ilail\\Desktop\\gerenciadorCondominio\\GerenciadorCondominios\\GerenciadorCondominios.DAL\\GerenciadorCondominios.DAL.csproj"
+            "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios.DAL\\GerenciadorCondominios.DAL.csproj": {
+              "projectPath": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios.DAL\\GerenciadorCondominios.DAL.csproj"
             }
           }
         }

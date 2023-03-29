@@ -4,6 +4,7 @@ using GerenciadorCondominios.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
+using Microsoft.VisualBasic;
 
 namespace GerenciadorCondominios.Controllers
 {
@@ -95,6 +96,63 @@ namespace GerenciadorCondominios.Controllers
 
             //}
             return View(model);
+        }
+
+        [HttpGet]
+        public async IActionResult Login()
+        {
+            if(User.Identity.IsAuthenticated)
+            {
+                await _usuarioRepositorio.DeslogarUsuario();
+            }
+            return View();
+        }
+
+        [ValidateAntiForgeryToken]
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginViewModel model)
+        {
+            Usuario usuario = await _usuarioRepositorio.PegarUsuarioPeloEmail(model.Email);
+            if (usuario != null)
+            {
+                if (usuario.Status == StatusConta.Analisando)
+                {
+                    return View("Analise", usuario.UserName);
+                }
+                else if(usuario.Status == StatusConta.Reprovado)
+                {
+                    return View("Reprovado", usuario.UserName);
+                }
+                else if (usuario.PrimeiroAcesso == true)
+                {
+                    return View("RedefinirSenha", usuario);
+                }
+                else
+                {
+                    PasswordHasher<Usuario> passwordHasher = new PasswordHasher<Usuario>();
+
+                    //checando se a senha está correta
+                    if(passwordHasher.VerifyHashedPassword(usuario, usuario.PasswordHash, model.Senha) != PasswordVerificationResult.Failed)
+                    {
+                        await _usuarioRepositorio.LogarUsuario(usuario, false);
+                        return RedirectToAction("Index");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Usuario e/ou senhas inválidos");
+                        return View(model);
+                    }
+                }
+
+            }
+            else
+            {
+                ModelState.AddModelError("", "Usuario e/ou senhas inválidods");
+                return View(model);
+            }
+
+            return View(model);
+
         }
 
         public IActionResult Analise(string nome)
