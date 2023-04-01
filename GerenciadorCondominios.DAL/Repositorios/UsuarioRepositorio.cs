@@ -1,16 +1,8 @@
 ﻿using GerenciadorCondominios.BLL.Models;
 using GerenciadorCondominios.DAL.Interfaces;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Primitives;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 namespace GerenciadorCondominios.DAL.Repositorios
-{ 
+{
     public class UsuarioRepositorio : RepositorioGenerico<Usuario>, IUsuarioRepositorio
     {
         private readonly Contexto _contexto;
@@ -62,18 +54,7 @@ namespace GerenciadorCondominios.DAL.Repositorios
                 throw ex;
             }
         }
-
-        public async Task DeslogarUsuario()
-        {
-            try
-            {
-                await _gerenciadorLogin.SignOutAsync();
-            }
-            catch(Exception ex)
-            {
-                throw ex;
-            }
-        }
+         
 
         public int VerificarSeExisteRegistro()
         {
@@ -98,5 +79,19 @@ namespace GerenciadorCondominios.DAL.Repositorios
                 throw ex;
             }
         }
+
+        public async Task DeslogarUsario()
+        {
+            try
+            {
+                await _gerenciadorLogin.SignOutAsync();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+       
     }
 }

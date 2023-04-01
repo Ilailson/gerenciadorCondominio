@@ -3,8 +3,6 @@ using GerenciadorCondominios.DAL.Interfaces;
 using GerenciadorCondominios.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
-using Microsoft.VisualBasic;
 
 namespace GerenciadorCondominios.Controllers
 {
@@ -95,15 +93,15 @@ namespace GerenciadorCondominios.Controllers
                 }
 
             //}
-            return View(model);
+            return View(model); 
         }
 
         [HttpGet]
-        public async IActionResult Login()
+        public async  Task<IActionResult> Login()
         {
             if(User.Identity.IsAuthenticated)
             {
-                await _usuarioRepositorio.DeslogarUsuario();
+                await _usuarioRepositorio.DeslogarUsario();
             }
             return View();
         }
@@ -153,6 +151,13 @@ namespace GerenciadorCondominios.Controllers
 
             return View(model);
 
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await _usuarioRepositorio.DeslogarUsario();
+            return RedirectToAction("Login");
         }
 
         public IActionResult Analise(string nome)
