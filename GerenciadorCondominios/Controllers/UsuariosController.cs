@@ -3,6 +3,7 @@ using GerenciadorCondominios.DAL.Interfaces;
 using GerenciadorCondominios.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualBasic;
 using System.ComponentModel;
 
 namespace GerenciadorCondominios.Controllers
@@ -165,5 +166,32 @@ namespace GerenciadorCondominios.Controllers
         {
             return View(nome);
         }
+
+        public IActionResult Reprovado(string nome)
+        {
+            return View(nome);
+        }
+
+
+        //=============================FUNÇÕES=================================
+        public async Task<JsonResult> AprovarUsuario(string usuarioId)
+        {
+            Usuario usuario = await _usuarioRepositorio.PegarPeloId(usuarioId);
+            usuario.Status = StatusConta.Aprovado;
+            await _usuarioRepositorio.IncluirUsuarioEmFuncao(usuario, "Morador");
+            await _usuarioRepositorio.AtualizarUsuario(usuario);
+
+            return Json(true);
+        }
+
+        public async Task<JsonResult> ReprovarUsuario(string usuarioId)
+        {
+            Usuario usuario = await _usuarioRepositorio.PegarPeloId(usuarioId);
+            usuario.Status = StatusConta.Reprovado;
+            await _usuarioRepositorio.AtualizarUsuario(usuario);
+
+            return Json(true);
+        }
+
     }
 }

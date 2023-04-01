@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YYhPHIrIGNmNAJfotA9kFYR8lqbIKPb96L/IjY0P4FE=",
+  "Hash": "N1v/3DiBCkbj19MMMUzyPXBLZIgmBAxkeMM+j8tZe4E=",
   "Source": "GerenciadorCondominios",
   "BasePath": "_content/GerenciadorCondominios",
   "Mode": "Default",
@@ -253,6 +253,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\IniciarMascaras.js"
+    },
+    {
+      "Identity": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\js\\OperacoesUsuario.js",
+      "SourceId": "GerenciadorCondominios",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\",
+      "BasePath": "_content/GerenciadorCondominios",
+      "RelativePath": "js/OperacoesUsuario.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\OperacoesUsuario.js"
     },
     {
       "Identity": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\js\\site.js",

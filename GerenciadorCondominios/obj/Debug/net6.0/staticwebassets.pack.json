@@ -53,6 +53,10 @@
       "PackagePath": "staticwebassets\\js\\IniciarMascaras.js"
     },
     {
+      "Id": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\js\\OperacoesUsuario.js",
+      "PackagePath": "staticwebassets\\js\\OperacoesUsuario.js"
+    },
+    {
       "Id": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
