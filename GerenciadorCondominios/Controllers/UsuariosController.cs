@@ -3,6 +3,7 @@ using GerenciadorCondominios.DAL.Interfaces;
 using GerenciadorCondominios.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel;
 
 namespace GerenciadorCondominios.Controllers
 {
@@ -17,9 +18,9 @@ namespace GerenciadorCondominios.Controllers
             _webHostEnvironment = webHostEnvironment;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            return View(await _usuarioRepositorio.PegarTodos()); /*listarUsuarios -formulario*/
         }
 
         [HttpGet]
