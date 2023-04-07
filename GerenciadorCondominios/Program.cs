@@ -26,6 +26,7 @@ builder.Services.AddAuthorization();
 
 //injetando serviços para realizar injeção de dependencias.
 builder.Services.AddTransient<IUsuarioRepositorio, UsuarioRepositorio>();
+builder.Services.AddTransient<IFuncaoRepositorio, FuncaoRepositorio>();
 
 
 //builder.Services.ConfigurarRepositorios();

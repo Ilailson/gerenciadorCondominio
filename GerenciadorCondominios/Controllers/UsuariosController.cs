@@ -3,20 +3,24 @@ using GerenciadorCondominios.DAL.Interfaces;
 using GerenciadorCondominios.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.VisualBasic;
-using System.ComponentModel;
 
 namespace GerenciadorCondominios.Controllers
 {
     public class UsuariosController : Controller
     {
         private readonly IUsuarioRepositorio _usuarioRepositorio;
+        private readonly IFuncaoRepositorio _funcaoRepositorio;
         private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public UsuariosController(IUsuarioRepositorio usuarioRepositorio, IWebHostEnvironment webHostEnvironment)
+        public UsuariosController(
+            IUsuarioRepositorio usuarioRepositorio,
+            IWebHostEnvironment webHostEnvironment,
+            IFuncaoRepositorio funcaoRepositorio
+            )
         {
             _usuarioRepositorio = usuarioRepositorio;
             _webHostEnvironment = webHostEnvironment;
+            _funcaoRepositorio = funcaoRepositorio;
         }
 
         public async Task<IActionResult> Index()
@@ -190,8 +194,77 @@ namespace GerenciadorCondominios.Controllers
             usuario.Status = StatusConta.Reprovado;
             await _usuarioRepositorio.AtualizarUsuario(usuario);
 
-            return Json(true);
+             return Json(true);
         }
 
+        //================================Gerenciamento de usuários ==================
+
+        [HttpGet]
+        public async Task<IActionResult> Gerenciarusuario(string usuarioId, string nome)
+        {
+
+            if (usuarioId == null) return NotFound();
+
+            //armazena informações - controller enviar - view
+            TempData["usuarioId"] = usuarioId;
+            ViewBag.Nome = nome;
+            Usuario usuario = await _usuarioRepositorio.PegarPeloId(usuarioId);
+
+            if(usuario == null) return NotFound();
+
+            List<FuncaoUsuarioViewModel> viewModel = new List<FuncaoUsuarioViewModel>();
+
+            foreach(Funcao funcao in await _funcaoRepositorio.PegarTodos())
+            {
+                FuncaoUsuarioViewModel model = new FuncaoUsuarioViewModel
+                {
+                    FuncaoId = funcao.Id,
+                    Nome = funcao.Name,
+                    Descricao = funcao.Descricao
+                };
+                //checando - usuario - funcao
+                if (await _usuarioRepositorio.VerificarSeUsuarioEstaEmFuncao(usuario, funcao.Name ))
+                {
+                    model.isSelecionado= true;
+                }
+                else
+                    model.isSelecionado = false;
+                viewModel.Add(model);
+            }
+            return View(viewModel);
+        }
+
+         
+        //utilizará lista - mostrar funções - possiveis selecionar
+        [HttpPost]
+        public async Task<IActionResult> Gerenciarusuario(List<FuncaoUsuarioViewModel> model)
+        {
+
+            string usuarioId = TempData["usuarioId"].ToString();//usuarioId - metodo GET
+
+            Usuario usuario = await _usuarioRepositorio.PegarPeloId(usuarioId);
+
+            if (usuario == null) return NotFound();
+
+            IEnumerable<string> funcoes = await _usuarioRepositorio.PegarFuncoesUsuario(usuario);
+            IdentityResult resultado = await _usuarioRepositorio.RemoverFuncoesUsuario(usuario, funcoes);
+
+            if (!resultado.Succeeded)
+            {
+                ModelState.AddModelError("", "Não foi possível atualizar as funções do usuário");
+                return View("GerenciarUsuario", usuarioId);
+            }
+
+            //salvar selecionados - forms
+            resultado = await _usuarioRepositorio.IncluirUsuarioEmFuncoes(usuario,
+                model.Where(x => x.isSelecionado == true).Select(x => x.Nome));
+
+            if (!resultado.Succeeded)
+            {
+                ModelState.AddModelError("", "Não foi possível atualizar as funções do usuário");
+                return View("GerenciarUsuario", usuarioId);
+            }
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
