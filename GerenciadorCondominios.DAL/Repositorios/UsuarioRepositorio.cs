@@ -1,8 +1,7 @@
 ﻿using GerenciadorCondominios.BLL.Models;
 using GerenciadorCondominios.DAL.Interfaces;
 using Microsoft.AspNetCore.Identity;
-
-
+using System.Security.Claims;
 
 namespace GerenciadorCondominios.DAL.Repositorios
 {
@@ -153,6 +152,32 @@ namespace GerenciadorCondominios.DAL.Repositorios
             try
             {
                 return await _gerenciadorUsuarios.AddToRolesAsync(usuario, funcoes);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public async Task<Usuario> PegarUsuarioPeloNome(ClaimsPrincipal usuario)
+        {
+            try
+            {
+                return await _gerenciadorUsuarios.FindByNameAsync(usuario.Identity.Name);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public async Task<Usuario> PegarUsuarioPeloId(string usuarioId)
+        {
+            try
+            {
+                return await _gerenciadorUsuarios.FindByIdAsync(usuarioId);
             }
             catch (Exception ex)
             {

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "N1v/3DiBCkbj19MMMUzyPXBLZIgmBAxkeMM+j8tZe4E=",
+  "Hash": "Qhf/iBYP3gUWAzuhYk5Nil8qr5d0o0f16rO2rJ2NUWU=",
   "Source": "GerenciadorCondominios",
   "BasePath": "_content/GerenciadorCondominios",
   "Mode": "Default",
@@ -185,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Imagens\\b226df86-0763-4fc8-855b-93a7de94f2f4coluna grafana.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\Imagens\\bc4804bf-996b-493e-b0d5-53f66345a2bfurgencia.jpg",
+      "SourceId": "GerenciadorCondominios",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\",
+      "BasePath": "_content/GerenciadorCondominios",
+      "RelativePath": "Imagens/bc4804bf-996b-493e-b0d5-53f66345a2bfurgencia.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Imagens\\bc4804bf-996b-493e-b0d5-53f66345a2bfurgencia.jpg"
     },
     {
       "Identity": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\Imagens\\dbe0cb98-740f-4680-b8f4-52b1c293bdabcpf Laurinho.jpeg",
