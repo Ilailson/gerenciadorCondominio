@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Qhf/iBYP3gUWAzuhYk5Nil8qr5d0o0f16rO2rJ2NUWU=",
+  "Hash": "ZVxpy8ZiRQ6v9n8ziiwUaFW25JKsZmeGn/f0MdJ8uDg=",
   "Source": "GerenciadorCondominios",
   "BasePath": "_content/GerenciadorCondominios",
   "Mode": "Default",
@@ -168,6 +168,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Imagens\\71c827a1-b3ac-4d9e-b1df-794f039d6629coluna grafana.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\Imagens\\a4d40054-3663-49fe-b518-308c033348f9graduação.jpg",
+      "SourceId": "GerenciadorCondominios",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\",
+      "BasePath": "_content/GerenciadorCondominios",
+      "RelativePath": "Imagens/a4d40054-3663-49fe-b518-308c033348f9graduação.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Imagens\\a4d40054-3663-49fe-b518-308c033348f9graduação.jpg"
     },
     {
       "Identity": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\Imagens\\b226df86-0763-4fc8-855b-93a7de94f2f4coluna grafana.jpg",
