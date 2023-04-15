@@ -3,7 +3,7 @@
     ViewData["Title"] = "Minhas Informações";
 }
 
-@*<partial name="_Confirmações" />*@
+<partial name="_Confirmacoes" />
 
 @*foto*@
 <div class="card horizontal">
@@ -44,10 +44,38 @@
 
 @*div para view content*@
 <div>
-    @*@await Component.InvokeAsync("Veiculos", Model.Id)*@
+    @await Component.InvokeAsync("Veiculos", Model.Id)
 </div>
 
 <div>
-    @*<partial name="_Excluir" />*@
+    <partial name="_ModalExcluir" />
 </div>
 
+@section Scripts{
+    <script>
+        function ConfirmarExclusao(id, nome){
+            //inicializar todos modais
+            $('.modal').modal({
+                dismissble: true
+            });
+
+            //abrir modal
+            $('#modal').modal('open');
+            $(".nome").text(nome);
+
+            //clicando no botão excluir
+            $(".btnExcluir").on('click', function (){
+
+                //chamada ajax
+                $.ajax({
+                    method: "POST",
+                    url: "/Veiculos/Delete",
+                    data: { id: id },
+                    success: function (data) {
+                        location.reload(true);
+                    }
+                })
+            })
+        }
+    </script>
+}

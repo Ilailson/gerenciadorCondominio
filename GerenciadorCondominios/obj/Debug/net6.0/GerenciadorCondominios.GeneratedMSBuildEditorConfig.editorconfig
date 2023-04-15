@@ -24,12 +24,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ilail/Desktop/condominio/gerenciadorCondominio/GerenciadorCondominios/Views/Shared/Components/Veiculos/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVmVpY3Vsb3NcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ilail/Desktop/condominio/gerenciadorCondominio/GerenciadorCondominios/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ilail/Desktop/condominio/gerenciadorCondominio/GerenciadorCondominios/Views/Shared/_Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ilail/Desktop/condominio/gerenciadorCondominio/GerenciadorCondominios/Views/Shared/_ModalExcluir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Nb2RhbEV4Y2x1aXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ilail/Desktop/condominio/gerenciadorCondominio/GerenciadorCondominios/Views/Shared/_ValidationScriptsPartial.cshtml]
@@ -72,6 +80,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcUmVwcm92YWRvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ilail/Desktop/condominio/gerenciadorCondominio/GerenciadorCondominios/Views/Veiculos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVpY3Vsb3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ilail/Desktop/condominio/gerenciadorCondominio/GerenciadorCondominios/Views/Veiculos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVpY3Vsb3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ilail/Desktop/condominio/gerenciadorCondominio/GerenciadorCondominios/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -79,6 +95,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/ilail/Desktop/condominio/gerenciadorCondominio/GerenciadorCondominios/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ilail/Desktop/condominio/gerenciadorCondominio/GerenciadorCondominios/Views/Shared/_Confirmacoes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Db25maXJtYWNvZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-fyhp1a0w4y
 
 [C:/Users/ilail/Desktop/condominio/gerenciadorCondominio/GerenciadorCondominios/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s

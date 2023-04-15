@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets\\GerenciadorCondominios.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\Imagens\\5746fe7b-4471-4f93-81f7-fe20a0a6390ccpf Laurinho.jpeg",
+      "PackagePath": "staticwebassets\\Imagens\\5746fe7b-4471-4f93-81f7-fe20a0a6390ccpf Laurinho.jpeg"
+    },
+    {
       "Id": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\Imagens\\57e5e4a3-10c2-4523-aafd-540ae2c68ea3coluna grafana.jpg",
       "PackagePath": "staticwebassets\\Imagens\\57e5e4a3-10c2-4523-aafd-540ae2c68ea3coluna grafana.jpg"
     },
     {
       "Id": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\Imagens\\5ce64ed6-9f71-4229-871c-c720780c27ffcpf Laurinho.jpeg",
       "PackagePath": "staticwebassets\\Imagens\\5ce64ed6-9f71-4229-871c-c720780c27ffcpf Laurinho.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\Imagens\\667c3a80-8270-4bbc-8386-a46938454c2a222.jpg",
+      "PackagePath": "staticwebassets\\Imagens\\667c3a80-8270-4bbc-8386-a46938454c2a222.jpg"
     },
     {
       "Id": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\Imagens\\6d888ece-0c1c-4287-9ebd-0c32d872bbe7coluna grafana.jpg",
@@ -29,6 +37,10 @@
       "PackagePath": "staticwebassets\\Imagens\\a4d40054-3663-49fe-b518-308c033348f9graduação.jpg"
     },
     {
+      "Id": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\Imagens\\b1f44fc6-d357-4d50-b094-49ff144c5d38222.jpg",
+      "PackagePath": "staticwebassets\\Imagens\\b1f44fc6-d357-4d50-b094-49ff144c5d38222.jpg"
+    },
+    {
       "Id": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\Imagens\\b226df86-0763-4fc8-855b-93a7de94f2f4coluna grafana.jpg",
       "PackagePath": "staticwebassets\\Imagens\\b226df86-0763-4fc8-855b-93a7de94f2f4coluna grafana.jpg"
     },
@@ -37,12 +49,20 @@
       "PackagePath": "staticwebassets\\Imagens\\bc4804bf-996b-493e-b0d5-53f66345a2bfurgencia.jpg"
     },
     {
+      "Id": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\Imagens\\c044236d-61ca-4cae-89b9-b228036b25facoluna grafana.jpg",
+      "PackagePath": "staticwebassets\\Imagens\\c044236d-61ca-4cae-89b9-b228036b25facoluna grafana.jpg"
+    },
+    {
       "Id": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\Imagens\\dbe0cb98-740f-4680-b8f4-52b1c293bdabcpf Laurinho.jpeg",
       "PackagePath": "staticwebassets\\Imagens\\dbe0cb98-740f-4680-b8f4-52b1c293bdabcpf Laurinho.jpeg"
     },
     {
       "Id": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\Imagens\\e97c89da-1e90-4137-bae5-73d551074299cpf Laurinho.jpeg",
       "PackagePath": "staticwebassets\\Imagens\\e97c89da-1e90-4137-bae5-73d551074299cpf Laurinho.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\Imagens\\f6fdd9f7-c039-42be-bb54-11694db7ddfagraduação.jpg",
+      "PackagePath": "staticwebassets\\Imagens\\f6fdd9f7-c039-42be-bb54-11694db7ddfagraduação.jpg"
     },
     {
       "Id": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\Imagens\\f75767cb-08cc-4089-80f5-4d42c5b26daccoluna grafana.jpg",
@@ -55,6 +75,10 @@
     {
       "Id": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\js\\InicializarTooltips.js",
+      "PackagePath": "staticwebassets\\js\\InicializarTooltips.js"
     },
     {
       "Id": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\js\\IniciarMascaras.js",
