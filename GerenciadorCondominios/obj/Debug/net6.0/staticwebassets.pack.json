@@ -77,6 +77,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\js\\ConfirmarExclusao.js",
+      "PackagePath": "staticwebassets\\js\\ConfirmarExclusao.js"
+    },
+    {
+      "Id": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\js\\InicializarDatepicker.js",
+      "PackagePath": "staticwebassets\\js\\InicializarDatepicker.js"
+    },
+    {
       "Id": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\js\\InicializarTooltips.js",
       "PackagePath": "staticwebassets\\js\\InicializarTooltips.js"
     },

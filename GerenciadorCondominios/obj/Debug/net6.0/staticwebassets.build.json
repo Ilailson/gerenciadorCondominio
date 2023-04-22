@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "o2nnQl7pcOxlvCRRgWq3LKf0cynOCP4pVl/a3Ske+4Y=",
+  "Hash": "tv0y61GsZcyQznx3ilctToWFbHq2DhBBthjTzSVAQII=",
   "Source": "GerenciadorCondominios",
   "BasePath": "_content/GerenciadorCondominios",
   "Mode": "Default",
@@ -355,6 +355,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Imagens\\f75767cb-08cc-4089-80f5-4d42c5b26daccoluna grafana.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\js\\ConfirmarExclusao.js",
+      "SourceId": "GerenciadorCondominios",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\",
+      "BasePath": "_content/GerenciadorCondominios",
+      "RelativePath": "js/ConfirmarExclusao.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\ConfirmarExclusao.js"
+    },
+    {
+      "Identity": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\js\\InicializarDatepicker.js",
+      "SourceId": "GerenciadorCondominios",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\",
+      "BasePath": "_content/GerenciadorCondominios",
+      "RelativePath": "js/InicializarDatepicker.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\InicializarDatepicker.js"
     },
     {
       "Identity": "C:\\Users\\ilail\\Desktop\\condominio\\gerenciadorCondominio\\GerenciadorCondominios\\wwwroot\\js\\InicializarTooltips.js",
