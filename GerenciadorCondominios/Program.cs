@@ -29,6 +29,7 @@ builder.Services.AddTransient<IUsuarioRepositorio, UsuarioRepositorio>();
 builder.Services.AddTransient<IFuncaoRepositorio, FuncaoRepositorio>();
 builder.Services.AddTransient<IVeiculoReposito,VeiculoRepositorio>();
 builder.Services.AddTransient<IEventoRepositorio, EventoRepositorio>();
+builder.Services.AddTransient<IServicoRepositorio, ServicoRepositorio>();
 
 
 //builder.Services.ConfigurarRepositorios();
