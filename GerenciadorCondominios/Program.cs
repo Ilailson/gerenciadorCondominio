@@ -30,6 +30,8 @@ builder.Services.AddTransient<IFuncaoRepositorio, FuncaoRepositorio>();
 builder.Services.AddTransient<IVeiculoReposito,VeiculoRepositorio>();
 builder.Services.AddTransient<IEventoRepositorio, EventoRepositorio>();
 builder.Services.AddTransient<IServicoRepositorio, ServicoRepositorio>();
+builder.Services.AddTransient<IServicoPredioRepositorio, ServicoPredioRepositorio>();
+builder.Services.AddTransient<IHistoricoRecursosRepositorio, HistoricoRecursosRepositorio>();
 
 
 //builder.Services.ConfigurarRepositorios();

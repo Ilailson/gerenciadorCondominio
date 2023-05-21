@@ -1,5 +1,6 @@
 ﻿using GerenciadorCondominios.BLL.Models;
 using GerenciadorCondominios.DAL.Interfaces;
+using GerenciadorCondominios.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GerenciadorCondominios.Controllers
@@ -9,11 +10,20 @@ namespace GerenciadorCondominios.Controllers
     {
         private readonly IServicoRepositorio _servicoRepositorio;
         private readonly IUsuarioRepositorio _usuarioRepositorio;
+        private readonly IServicoPredioRepositorio _servicoPredioRepositorio;
+        private readonly IHistoricoRecursosRepositorio _historicoRecursosRepositorio;
 
-        public ServicosController(IServicoRepositorio servicoRepositorio, IUsuarioRepositorio usuarioRepositorio)
+        public ServicosController
+        (
+            IServicoRepositorio servicoRepositorio,IUsuarioRepositorio usuarioRepositorio,
+            IServicoPredioRepositorio servicoPredioRepositorio, IHistoricoRecursosRepositorio historicoRecursosRepositorio
+        )
         {
             _servicoRepositorio = servicoRepositorio;
             _usuarioRepositorio = usuarioRepositorio;
+            _servicoPredioRepositorio = servicoPredioRepositorio;
+            _historicoRecursosRepositorio = historicoRecursosRepositorio;
+
         }
 
         // GET: Eventos
@@ -96,6 +106,79 @@ namespace GerenciadorCondominios.Controllers
             await _servicoRepositorio.Excluir(id);
             TempData["Exclusao"] = $"Servico excluído";
             return Json("Serviço excluído");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> AprovarServico(int id)
+        {
+            //pegando servido aprovado - id
+            Servico servico = await _servicoRepositorio.PegarPeloId(id);
+
+            //instanciando viewModel - com serviços aprovado
+            ServicoAprovadoViewModel viewModel = new ServicoAprovadoViewModel
+            {
+                ServicoId = servico.ServicoId,
+                Nome = servico.Nome
+            };
+
+            return View(viewModel);
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AprovarServico(ServicoAprovadoViewModel viewModel)
+        {
+            if(viewModel != null)
+            {
+                /*pegar servido será aprovado - id*/
+                Servico servico = await _servicoRepositorio.PegarPeloId(viewModel.ServicoId);
+                servico.Status = StatusServico.Aceito;//atualizando status
+                await _servicoRepositorio.Atualizar(servico);//atualizando banco
+
+
+                //instanciando servico predio - inserir - banco
+
+                ServicoPredio servicoPredio = new ServicoPredio
+                {
+                    ServicoId = viewModel.ServicoId,
+                    DataExecucao = viewModel.Data
+
+                };
+                await _servicoPredioRepositorio.inserir(servicoPredio); //salvando  banco
+
+
+                /*Instanciando historico recurso - inserir - banco*/
+                HistoricoRecursos hr = new HistoricoRecursos
+                {
+                    Valor = servico.Valor,
+                    MesId = servicoPredio.DataExecucao.Month,
+                    Dia = servicoPredio.DataExecucao.Day,
+                    Ano = servicoPredio.DataExecucao.Year,
+                    Tipo = Tipos.Saida
+                };
+
+                await _historicoRecursosRepositorio.inserir(hr);//salvando - banco
+                TempData["NovoRegistro"] = $"{servico.Nome} escalado com sucesso";
+                return RedirectToAction(nameof(Index));
+            }
+            
+            return View(viewModel);
+        }
+
+        public async Task<IActionResult> RecusarServico(int id)
+        {
+            Servico servico = await _servicoRepositorio.PegarPeloId(id); //pegando - idservico existente
+
+            if (servico == null) return NotFound();
+
+            servico.Status = StatusServico.Recusado;//atualizando status
+            await _servicoRepositorio.Atualizar(servico); //atualizando  banco
+            TempData["Exclusao"] = $"{servico.Nome} recusado";
+
+            return RedirectToAction(nameof(Index));
+
+
         }
 
     }
